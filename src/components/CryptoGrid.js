@@ -1,5 +1,3 @@
-// src/components/CryptoGrid.js
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -15,7 +13,7 @@ const CryptoGrid = () => {
     const getData = async () => {
       try {
         const response = await axios.get("https://api.coincap.io/v2/assets");
-        console.log(response.data); // Log the API data
+        // console.log(response.data);
         const cryptosData = response.data.data;
         setCryptos(cryptosData);
       } catch (error) {
